@@ -1,0 +1,11 @@
+<app-sidenav [themeColor]="'primary'">
+  <h1 class="h1">Teste | XML CCEE</h1>
+  <div>
+      <label for="arquivo">Upload<br><mat-icon class="ico">cloud_queue</mat-icon></label>
+      <input type="file" (change)="loadXML($event)" name="arquivo" #arquivo id="arquivo" multiple accept=".xml">
+  </div>
+  <br>
+  <div class="progres" [style.display]="displayProcess">
+    <mat-progress-bar mode="indeterminate" [value]="valueProgress"></mat-progress-bar>
+  </div>
+</app-sidenav>
